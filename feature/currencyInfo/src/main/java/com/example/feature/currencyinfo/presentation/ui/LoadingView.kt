@@ -17,7 +17,7 @@ fun LoadingView(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.Black.copy(alpha = 0.1f))
+            .background(Color.White)
             .clickable(enabled = true) {}
     ) {
         CircularProgressIndicator(
