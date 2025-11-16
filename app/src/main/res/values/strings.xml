@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DemoCurrency</string>
+    <string name="cta_init_data">Init Database</string>
+    <string name="cta_clear_data">Clear Database</string>
+    <string name="cta_insert_data">Insert Database</string>
+    <string name="cta_display_all">Display All Currencies</string>
+    <string name="msg_clear_db_successfully">Clear Database Successfully</string>
+    <string name="msg_init_db_successfully">Init Database Successfully</string>
+    <string name="msg_add_db_successfully">Add Database Successfully</string>
+</resources>

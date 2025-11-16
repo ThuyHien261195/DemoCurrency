@@ -1,0 +1,11 @@
+apply plugin: 'org.jetbrains.kotlin.plugin.compose'
+
+android {
+    buildFeatures {
+        compose true
+    }
+
+    composeCompiler {
+        enableStrongSkippingMode = true
+    }
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="add_currency_title">Add Currency</string>
+    <string name="label_id">Id</string>
+    <string name="label_name">Name</string>
+    <string name="label_symbol">Symbol</string>
+    <string name="label_code">Code</string>
+    <string name="label_group_type">Group Type</string>
+    <string name="cta_save">Save</string>
+    <string name="cta_cancel">Cancel</string>
+    <string name="label_search_in">Search in %1$s</string>
+    <string name="label_search_all">Search All</string>
+</resources>

@@ -1,0 +1,98 @@
+// Borrow from https://github.com/afollestad/library-template-android/blob/main/gradle/android_common_config.gradle
+apply plugin: "kotlin-android"
+// For JUnit5
+//apply plugin: "de.mannodermaus.android-junit5"
+
+android {
+    compileSdkVersion libs.versions.compileSdkVersion.get().toInteger()
+
+    buildTypes {
+        debug {
+            enableUnitTestCoverage true
+            enableAndroidTestCoverage false
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion libs.versions.minSdkVersion.get().toInteger()
+        targetSdkVersion libs.versions.targetSdkVersion.get().toInteger()
+
+        // Use default vCode and vName.
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    // https://developer.android.com/reference/tools/gradle-api/7.4/com/android/build/api/dsl/BuildFeatures
+    // Will disable all buildFeatures by default
+    // If we want to enable some buildFeatures, let enable them in your own module
+    buildFeatures {
+        aidl false
+        buildConfig false
+        compose false
+        prefab false
+        renderScript false
+        resValues false
+        shaders false
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
+
+    kotlin {
+        jvmToolchain(17)
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+}
+
+apply from: rootProject.file("gradle/android_lint_config.gradle")
+//apply from: rootProject.file("gradle/unit_test_config.gradle")
+
+//junitPlatform {
+//    // JUnit5 configuration goes here!
+//}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation libs.coreLogger
+//    implementation libs.coreAndroidText
+//    implementation libs.coreAndroidTextImpl
+
+//    implementation libs.appCompatLib
+
+    // Unit test
+//    testImplementation libs.androidXTestCore
+//    testImplementation libs.robolectricTest
+//    testImplementation libs.mockk
+//    testImplementation libs.truth
+//    testImplementation libs.junit
+//    testImplementation libs.coreAndroidTestUtils
+//    testImplementation libs.turbine
+//
+//    // (Required) Writing and executing Unit Tests on the JUnit Platform
+//    testImplementation libs.junit5Api
+//    testRuntimeOnly libs.junit5Engine
+//    // (Optional) If you need "Parameterized Tests"
+//    testImplementation libs.junit5Params
+//    // (Optional) If you also have JUnit 4-based tests
+//    testRuntimeOnly libs.junit5Vintage
+//    // END: Unit test
+//
+//    // UI test
+//
+//    // END: UI test
+//
+//    // Import the BoM for the Firebase platform
+//    implementation platform(libs.firebaseBOM)
+//
+//    testImplementation libs.slf4j
+}
