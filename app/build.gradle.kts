@@ -7,26 +7,10 @@ plugins {
 }
 
 apply(from = rootProject.file("gradle/android_library_compose_config.gradle"))
-apply(from = rootProject.file("gradle/android_library_config.gradle"))
+apply(from = rootProject.file("gradle/android_common_config.gradle"))
 
 android {
     namespace = "com.example.democurrency"
-//    compileSdk = 36
-//
-//    defaultConfig {
-//        applicationId = "com.example.democurrency"
-//        minSdk = 24
-//        targetSdk = 36
-//        versionCode = 1
-//        versionName = "1.0"
-//
-//        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-//    }
-
-//    buildFeatures{
-//        buildConfig = true
-//        compose = true
-//    }
 
     buildTypes {
         debug {

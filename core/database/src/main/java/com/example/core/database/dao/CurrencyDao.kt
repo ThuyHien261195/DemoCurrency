@@ -4,17 +4,12 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import androidx.room.Transaction
 import com.example.core.database.model.CurrencyGroupTypeEntity
-import com.example.core.database.model.CurrencyGroupWithCurrencies
 import com.example.core.database.model.CurrencyInfoEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface CurrencyDao {
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertGroup(group: CurrencyGroupTypeEntity): Long
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertGroups(groups: List<CurrencyGroupTypeEntity>)
@@ -24,9 +19,6 @@ interface CurrencyDao {
 
     @Query("SELECT * FROM currency_group_type_entity WHERE id = :groupId")
     fun getGroupInfo(groupId: Int?): Flow<CurrencyGroupTypeEntity?>
-
-    @Query("SELECT * FROM currency_info_entity")
-    fun getAllCurrencies(): Flow<List<CurrencyInfoEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertCurrencies(currencies: List<CurrencyInfoEntity>)
@@ -40,12 +32,9 @@ interface CurrencyDao {
     @Query("DELETE FROM currency_info_entity")
     suspend fun clearCurrencyInfo()
 
-    @Query("DELETE FROM currency_group_type_entity")
-    suspend fun clearCurrencyGroup()
-
     @Query(
         """
-    SELECT * 
+    SELECT *
     FROM currency_info_entity
     WHERE
         (
@@ -54,7 +43,7 @@ interface CurrencyDao {
             OR LOWER(symbol) LIKE LOWER(:keyword || '%')
         )
         AND (:groupId IS NULL OR groupId = :groupId)
-        """
+        """,
     )
     fun searchCurrencies(keyword: String, groupId: Int?): Flow<List<CurrencyInfoEntity>>
 }

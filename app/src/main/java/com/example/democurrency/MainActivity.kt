@@ -84,9 +84,10 @@ class MainActivity : AppCompatActivity() {
     private fun openListFragment(groupId: Int? = null) {
         supportFragmentManager.beginTransaction()
             .replace(
-                R.id.main_container, currencyInfoFragmentFactory.createFragment(
+                R.id.main_container,
+                currencyInfoFragmentFactory.createFragment(
                     groupId = groupId,
-                )
+                ),
             )
             .addToBackStack(null)
             .commit()

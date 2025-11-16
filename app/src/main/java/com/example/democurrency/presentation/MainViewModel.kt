@@ -75,7 +75,7 @@ class MainViewModel @Inject constructor(
 
     fun addCurrencyInfo(
         groupId: Int,
-        currencyInfoUiModel: CurrencyInfoUiModel
+        currencyInfoUiModel: CurrencyInfoUiModel,
     ) {
         viewModelScope.launch {
             try {

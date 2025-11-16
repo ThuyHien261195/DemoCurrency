@@ -54,7 +54,6 @@ android {
 
 }
 
-apply from: rootProject.file("gradle/android_lint_config.gradle")
 //apply from: rootProject.file("gradle/unit_test_config.gradle")
 
 //junitPlatform {

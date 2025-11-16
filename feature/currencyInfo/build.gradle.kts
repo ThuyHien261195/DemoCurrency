@@ -6,7 +6,7 @@ plugins {
 }
 
 apply(from = rootProject.file("gradle/android_library_compose_config.gradle"))
-apply(from = rootProject.file("gradle/android_library_config.gradle"))
+apply(from = rootProject.file("gradle/android_common_config.gradle"))
 
 android {
     namespace = "com.example.feature.currencyinfo"
@@ -17,7 +17,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.appcompat)
-//    implementation(libs.material)
 
     implementation(libs.roomRuntime)
     implementation(libs.roomKtx)

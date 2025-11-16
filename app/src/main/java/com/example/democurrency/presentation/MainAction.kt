@@ -4,5 +4,5 @@ sealed class MainAction {
 
     data class ShowListAction(val groupId: Int) : MainAction()
 
-    data object ShowAllAction: MainAction()
+    data object ShowAllAction : MainAction()
 }

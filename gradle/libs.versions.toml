@@ -1,7 +1,6 @@
 [versions]
 targetSdkVersion = "36"
 compileSdkVersion = "36"
-# must also update the minSdkVersionString below when changing this
 minSdkVersion = "24"
 agp = "8.12.3"
 kotlin = "2.0.21"
@@ -12,7 +11,6 @@ espressoCore = "3.7.0"
 appcompat = "1.7.1"
 material = "1.13.0"
 roomVersion = "2.7.2"
-detektVersion = "1.23.8"
 hiltVersion = "2.52"
 composeBomVersion = "2024.10.00"
 activityComposeVersion = "1.9.2"
@@ -31,7 +29,6 @@ activity-compose = { module = "androidx.activity:activity-compose", version.ref 
 
 
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detektVersion" }
 immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "immutableVersion" }
 
 # Room
@@ -57,7 +54,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-detektPlugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detektVersion" }
 spotlessPlugin = "com.diffplug.spotless:7.0.2"
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
 ksp = { id = "com.google.devtools.ksp", version = "2.0.21-1.0.27" }
