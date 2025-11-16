@@ -52,8 +52,7 @@ fun CurrencySearchBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp)
-                .background(color = Color(0xFFF6F9FA), shape = RoundedCornerShape(4.dp))
-                .padding(horizontal = 8.dp),
+                .background(color = Color(0xFFF6F9FA)),
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(onClick = onBack) {

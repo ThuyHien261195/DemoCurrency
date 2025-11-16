@@ -10,5 +10,5 @@
     <string name="label_search_in">Search in %1$s</string>
     <string name="label_search_all">Search All</string>
     <string name="msg_no_results">No Results</string>
-    <string name="description_no_results">Try "\\MCO"\\</string>
+    <string name="description_no_results">Try \"MCO\"</string>
 </resources>

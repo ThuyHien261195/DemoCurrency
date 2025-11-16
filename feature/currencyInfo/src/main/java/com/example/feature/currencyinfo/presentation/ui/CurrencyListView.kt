@@ -69,7 +69,7 @@ fun EmptyCurrencyListView(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
     ) {
         Surface(
             shape = CircleShape,
