@@ -24,7 +24,7 @@ interface CurrencyDao {
     suspend fun insertCurrencies(currencies: List<CurrencyInfoEntity>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertCurrency(currency: CurrencyInfoEntity): Long
+    suspend fun insertCurrency(currency: CurrencyInfoEntity)
 
     @Query("SELECT * FROM currency_info_entity WHERE :groupId IS NULL OR groupId = :groupId")
     fun getCurrenciesByGroup(groupId: Int?): Flow<List<CurrencyInfoEntity>>

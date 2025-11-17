@@ -14,6 +14,7 @@ fun CurrencyInfoModel.toCurrencyInfoUiModel(): CurrencyInfoUiModel = CurrencyInf
 )
 
 fun CurrencyInfoUiModel.toCurrencyInfoModel(): CurrencyInfoModel = CurrencyInfoModel(
+    id = id,
     name = name,
     symbol = symbol,
     code = code,

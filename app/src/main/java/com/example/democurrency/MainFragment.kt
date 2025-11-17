@@ -13,12 +13,12 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.feature.currencyinfo.presentation.dialog.AddCurrencyDialog
 import com.example.democurrency.presentation.MainAction
 import com.example.democurrency.presentation.MainViewModel
 import com.example.democurrency.presentation.ui.ActionButtonsGroupView
-import com.example.feature.currencyinfo.presentation.ui.LoadingView
 import com.example.democurrency.presentation.ui.StateEvent
+import com.example.feature.currencyinfo.presentation.dialog.AddCurrencyDialog
+import com.example.feature.currencyinfo.presentation.ui.LoadingView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

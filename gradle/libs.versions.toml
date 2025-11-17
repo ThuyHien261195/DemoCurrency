@@ -6,8 +6,6 @@ agp = "8.12.3"
 kotlin = "2.0.21"
 coreKtx = "1.17.0"
 junit = "4.13.2"
-junitVersion = "1.3.0"
-espressoCore = "3.7.0"
 appcompat = "1.7.1"
 material = "1.13.0"
 roomVersion = "2.7.2"
@@ -17,24 +15,28 @@ activityComposeVersion = "1.9.2"
 immutableVersion = "0.3.7"
 fragmentKtxVersion = "1.8.2"
 gsonVersion = "2.13.2"
+robolectric = "4.11"
+testCoreKtxVersion = "1.7.0"
+mockkVersion = "1.13.8"
+coroutineTestVersion = "1.7.3"
+turbineVersion = "1.0.0"
+coroutinesVersion = "1.7.3"
+spotlessVersion = "7.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtxVersion" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
-
-
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "immutableVersion" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutineTestVersion" }
 
 # Room
 roomRuntime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
 roomKtx = { module = "androidx.room:room-ktx", version.ref = "roomVersion" }
-roomPaging = { module = "androidx.room:room-paging", version.ref = "roomVersion" }
 roomCompiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gsonVersion"}
 
@@ -49,11 +51,20 @@ compose-material3 = { module = "androidx.compose.material3:material3" }
 compose-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
 
+# Test libs (instrumentation)
+test-core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "testCoreKtxVersion" }
+
+# Unit testing
+junit = { module = "junit:junit", version.ref = "junit" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockkVersion" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbineVersion" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-spotlessPlugin = "com.diffplug.spotless:7.0.2"
+spotlessPlugin = { id = "com.diffplug.spotless", version.ref = "spotlessVersion" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
 ksp = { id = "com.google.devtools.ksp", version = "2.0.21-1.0.27" }

@@ -17,4 +17,8 @@ dependencies {
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    testImplementation(libs.test.core.ktx)
+    testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
 }

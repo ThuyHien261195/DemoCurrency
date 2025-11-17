@@ -36,4 +36,11 @@ dependencies {
     implementation(libs.compose.preview)
     implementation(libs.activity.compose)
     debugImplementation(libs.compose.tooling)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.turbine)
+    testImplementation(project(":core:ktTestUtils"))
 }

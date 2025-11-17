@@ -17,4 +17,6 @@ dependencies {
 
     implementation(project(":core:database"))
     implementation(libs.immutable)
+
+    testImplementation(libs.junit)
 }
